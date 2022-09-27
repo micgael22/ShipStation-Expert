@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-09-08T21:21:02.347639700Z</date>
+  <millis>1662672062347</millis>
+  <nanos>639700</nanos>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>com.screenShotExample.ReportListener</class>
+  <method>loginTestDemo</method>
+  <thread>1</thread>
+  <message>URL is open</message>
+</record>
+</log>
