@@ -2,12 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
+
+<!--ALLURE REPORT-->
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="org.allureTestNG.AllureListenerNew"></listener>
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/codeProjects/ShipStationExpert/pom.xml">
         <classes>
+            <class name="org.allureTestNG.LoginTC"></class>
             <class name="org.allureTestNG.BingSearch"></class>
             <class name="org.allureTestNG.GoogleSearch"></class>
         </classes>
