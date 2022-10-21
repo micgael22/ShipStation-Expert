@@ -15,10 +15,10 @@ import java.net.URL;
 
 @Listeners({AllureListenerNew.class})
 
-public class BingSearch {
+public class BingSearch  {
 
     WebDriver driver;
-    private URL pathFile = GoogleSearch.class.getResource("/files/");
+    private URL pathFile = BingSearch.class.getResource("/files/");
 
     @BeforeClass(description = "BROWSER START UP")
     public void setUpNEW(ITestContext iTestContext) {
@@ -65,7 +65,8 @@ public class BingSearch {
     public void bingForwardToPage(ITestContext iTestContext) {
 
         driver.navigate().forward();
-        Assert.assertEquals("Bingg",driver.getTitle());
+        Assert.assertEquals("Allure Report - Search",driver.getTitle());
+        //actual: "Bing" // test to fail
     }
 
     public static void setDriverToContext(ITestContext iTestContext, WebDriver driver) {

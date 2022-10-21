@@ -15,7 +15,9 @@ import java.io.IOException;
 import java.net.URL;
 
 @Listeners({AllureListenerNew.class})
+
 public class GoogleSearch {
+
     WebDriver driver;
     private URL pathFile = GoogleSearch.class.getResource("/files/");
 
@@ -28,7 +30,7 @@ public class GoogleSearch {
     }
 
     @AfterClass(description = "BROWSER TEAR DOWN")
-    public void tearDownNEW(ITestContext iTestContext) throws IOException {
+    public void tearDownNEW(ITestContext iTestContext) {
         driver.close();
     }
 
@@ -65,7 +67,8 @@ public class GoogleSearch {
     public void googleForwardToPage(ITestContext iTestContext) {
 
         driver.navigate().forward();
-        Assert.assertEquals("Googleee",driver.getTitle());
+        Assert.assertEquals("Allure Report - Google Search",driver.getTitle());
+        //actual: "Bing" // test to fail
     }
 
     public static void setDriverToContext(ITestContext iTestContext, WebDriver driver) {
@@ -74,5 +77,6 @@ public class GoogleSearch {
     public static WebDriver getDriverFromContext(ITestContext iTestContext) {
         return (WebDriver) iTestContext.getAttribute("Webriver");
     }
+
 
 }

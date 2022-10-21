@@ -13,33 +13,21 @@ import java.util.UUID;
 
 public class AllureListenerNew extends TestListenerAdapter {
 
-//   @Override
-//    public void onTestFailure(ITestResult result) {
-//        System.out.println("Executing Listener on failure");
-//        WebDriver driver = GoogleSearch.getDriverFromContext(result.getTestContext());
-//
-//        try {
-//            Allure.addAttachment(UUID.randomUUID().toString(),
-//                    new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
-//        }
-//        catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
-        private static String getTestMethodName(ITestResult result) {
+    private static String getTestMethodName(ITestResult result) {
         return result.getMethod().getConstructorOrMethod().getName();
     }
-        @Attachment(value= "Web Page screenshot", type = ".png")
+    @Attachment(value= "Web Page screenshot", type = ".png")
     public byte[] saveFailureScreenShot(WebDriver driver) { // saveFailureScreenShot
         return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     }
 
-        @Attachment(value = "{0}", type = "text")
+    @Attachment(value = "{0}", type = "text")
     public static String saveTextLog(String message) {
         return message;
     }
 
-           @Override
+
+    @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("I am in onTestFailure method " + getTestMethodName(result) + " failed");
         Object testClass = result.getInstance();
