@@ -10,7 +10,6 @@ import org.utils.XLUtils;
 import java.io.IOException;
 
 public class TC_LoginDDT_02 extends BaseClassTest{
-
     @Test(dataProvider = "LoginData")
     public void loginDDT(String user, String pwd) {
 
