@@ -3,18 +3,11 @@ package org.allureTestNG;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.pageObjects.LoginPage;
 import io.tests.utilities.ReadConfig;
-import org.apache.commons.configuration.ConfigurationException;
-import org.apache.commons.configuration.PropertiesConfiguration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
